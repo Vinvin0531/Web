@@ -90,14 +90,26 @@ h6 {
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+  display: none !important;
+  visibility: hidden !important; /* 隱藏元素 */
+  opacity: 0 !important;          /* 變成完全透明 */
+  height: 0 !important;           /* 高度歸零 */
+  padding: 0 !important;          /* 內邊距歸零（消滅紅色大區塊） */
+  margin: 0 !important;           /* 外邊距歸零 */
+  border: none !important;        /* 拔掉任何邊框 */
+  font-size: 0 !important;        /* 字體縮小到不見 */
 }
+
+.php-email-form .error-message {display: none !important;
+  visibility: hidden !important; /* 隱藏元素 */
+  opacity: 0 !important;          /* 變成完全透明 */
+  height: 0 !important;           /* 高度歸零 */
+  padding: 0 !important;          /* 內邊距歸零（消滅紅色大區塊） */
+  margin: 0 !important;           /* 外邊距歸零 */
+  border: none !important;        /* 拔掉任何邊框 */
+  font-size: 0 !important;        /* 字體縮小到不見 */
+}
+
 
 .php-email-form .sent-message {
   display: none;
@@ -884,7 +896,9 @@ section,
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 120px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--background-color);
   margin: 0 auto;
@@ -1420,4 +1434,55 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+.custom-btn {
+    background-color: #2698b9 !important; 
+    color: white !important;
+    padding: 12px 35px !important;
+    border-radius: 50px !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease; 
+    font-weight: 600;
+}
+
+.custom-btn:hover {
+    background-color: #4169E1 !important; 
+    transform: translateY(-4px);          
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    color: white !important;
+}
+
+.btn-divider {
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+
+.custom-send-btn {
+    background-color: #5da0bf !important; 
+    color: white !important;
+    border: none !important;
+    padding: 12px 40px !important;
+    border-radius: 50px !important;      
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease !important; 
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-send-btn .btn-divider {
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+
+.custom-send-btn:hover {
+    background-color: #4a8aa8 !important; 
+    transform: translateY(-3px);          
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
 }
